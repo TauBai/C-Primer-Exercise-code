@@ -11,7 +11,7 @@ template <class I>
 inline typename iterator_traits<I>::iterator_category
 iterator_category(const I&){
     typedef typename iterator_traits<I>::iterator_category category;
-    return category();
+    return category();                                  //why category(), not category?
 }
 
 template <class I>
