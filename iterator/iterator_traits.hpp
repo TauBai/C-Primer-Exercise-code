@@ -17,6 +17,8 @@ struct iterator_traits<I*>{
 //here we can figure out why we have to seperate const type
     typedef I* pointer;              
     typedef I& reference;
+    
+    typedef random_access_iterator_tag iterator_category;
 }
 template <class I>
 struct iterator_traits<const I*>{
@@ -25,6 +27,8 @@ struct iterator_traits<const I*>{
 //here we can figure out why we have to seperate const type
     typedef const I* pointer;
     typedef const I& reference;
+    
+    typedef random_access_iterator_tag iterator_category;
 }
 
 
